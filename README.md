@@ -1,4 +1,4 @@
-# Deep Learning: LSTM RNN Cryptocurrency Price Predictor Model
+# Deep Learning: LSTM RNN Cryptocurrency Price Predictor
 
 *Does sentiment or closing prices provide a better signal for cryptocurrency price movements?* 
 
