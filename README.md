@@ -14,11 +14,8 @@ Steps Completed:
 
 ## Prepare the data for training and testing 
 
-# Set the random seed for reproducibility
-from numpy.random import seed
-seed(1)
-from tensorflow import random
-random.set_seed(2)
+Libraries `numpy` and `tensorflow` were imported. `Tensorflow` is a computational framework for building machine learning models. 
+
 
 1. Use the `window_data` function to generate the X and y values for the model.
 2. Split the data into 70% training and 30% testing
