@@ -51,8 +51,25 @@ number_units = 30
 dropout_fraction = 0.2
 ```
 <br/>
-The models were built with three layers and compiled with the Adam optimizer and mean-squared-error loss function. The models were fit with `X_train` and `y_train`, 10 epochs, and 1 batch size.
+The models were built with three layers and compiled with the Adam optimizer and mean-squared-error loss function. The models were fit with X_train and y_train, 10 epochs, and 1 batch size.
 
+```
+# Layer 1 
+model.add(LSTM(units=number_units, return_sequences=True, input_shape=(X_train.shape[1],1)))
+model.add(Dropout(dropout_fraction))
+
+# Layer 2 
+model.add(LSTM(units=number_units, return_sequences=True))
+model.add(Dropout(dropout_fraction))
+
+# Layer 3
+model.add(LSTM(units=number_units))
+model.add(Dropout(dropout_fraction))
+
+# Output layer
+model.add(Dense(1))
+
+```
 
 ## Evaluate the performance of the model 
 
