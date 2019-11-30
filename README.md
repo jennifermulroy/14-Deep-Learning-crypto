@@ -4,9 +4,9 @@
 
 In this analysis, custom Long-short term memory (LSTM) models were used to predict Bitcoin's price. 
 
-Long Short Term Memory model (LSTM) is a type of deep learning with a Recurrent Neural Network (RNN) architecture. It uses feedback connections to keep track of the dependencies between the elements in the input sequence and looks at the last “n” days (timestep) data to predict how the series progresses. 
+Long Short Term Memory model (LSTM) is a type of deep learning with a Recurrent Neural Network (RNN) architecture. It uses feedback connections to keep track of the dependencies between the elements in the input sequence and looks at the last “n” days (timestep or lag) data to predict how the series progresses. 
 
-For this analysis, sentiment and previous closing prices were used as inputs in the models to determine if they provide potential predictive patterns to forecast prices. For the sentiment data, the [Crypto Fear and Greed Index (FNG)](https://alternative.me/crypto/fear-and-greed-index/) was used to build the first model. The second model used a lag of Bitcoin closing prices.  
+For this analysis, sentiment and previous closing prices were used as inputs in the models testing various lags of data to determine if there were potential predictive patterns that could accurately forecast prices. For the sentiment data, the [Crypto Fear and Greed Index (FNG)](https://alternative.me/crypto/fear-and-greed-index/) was used to build the first model. The second model used a lag of Bitcoin closing prices.  
 
 Steps Completed: 
 
@@ -58,16 +58,18 @@ The models were built with three layers and compiled with the Adam optimizer and
 
 ## Evaluate the performance of the model 
 
-predicted = model.predict(X_test)
+Once the models were built, X_test data was used to predict prices.  
 
-Since we scaled the original values using the MinMaxScaler, we need to recover the original prices to better understand of the predictions using `inverse_transform()` method of the scaler to decode the scaled values to their original scale.
+`predicted = model.predict(X_test)`
+
+Since the original values were scaled, the`inverse_transform()` method was used to decode the scaled values back to their original scale.
 
 ```
 predicted_prices = scaler.inverse_transform(predicted)
 real_prices = scaler.inverse_transform(y_test.reshape(-1,1))
 ```
 
-### Summary of Results 
+### Summary of Model Results 
 
 Three windows of data was tested, 1 day, 5 days, 10 days. Closing prices had a lower loss and tracked closer to actual bitcoin prices over time. Both models predictability weakened as the lag increased.  
 
