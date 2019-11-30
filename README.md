@@ -68,9 +68,10 @@ real_prices = scaler.inverse_transform(y_test.reshape(-1,1))
 ```
 
 ### Summary of Results 
-> Which model has a lower loss?
 
-| Window | Closing | FNG    |
+Three windows of data was tested, 1 day, 5 days, 10 days. Closing prices had a lower loss and tracked closer to actual bitcoin prices over time. Both models predictability weakened as the lag increased.  
+
+| Window | Closing Loss | FNG Loss    |
 |:---:     | :---:     | :---:    |
 | 1      |0.0271   | 0.1142 |
 | 5      | 0.0522  | 0.1227 |
@@ -78,13 +79,11 @@ real_prices = scaler.inverse_transform(y_test.reshape(-1,1))
 
 
 
-> Which model tracks the actual values better over time?
-
-| Closing                         | FNG                       |
-|:---:                            | :---:                     |
-|![closing1](Images/closing1.png) |   ![FNG1](Images/FNG1.png)|
-|![closing1](Images/closing5.png) |   ![FNG5](Images/FNG5.png)|
+| Closing                         | FNG                         |
+|:---:                            | :---:                       |
+|![closing1](Images/closing1.png) |   ![FNG1](Images/FNG1.png)  |
+|![closing1](Images/closing5.png) |   ![FNG5](Images/FNG5.png)  |
 |![closing1](Images/closing10.png)|   ![FNG10](Images/FNG10.png)|
 
 
-> Which window size works best for the model?
+
