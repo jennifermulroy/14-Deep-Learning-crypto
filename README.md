@@ -80,11 +80,11 @@ real_prices = scaler.inverse_transform(y_test.reshape(-1,1))
 
 > Which model tracks the actual values better over time?
 
-![closing1](Images/closing1.png)    ![fng1](Images/fng1.png)
+![closing1](Images/closing1.png)    ![FNG1](Images/FNG1.png)
 
-![closing1](Images/closing5.png)    ![fng1](Images/fng5.png)
+![closing1](Images/closing5.png)    ![FNG5](Images/FNG5.png)
 
-![closing1](Images/closing10.png)    ![fng1](Images/fng10.png)
+![closing1](Images/closing10.png)    ![FNG10](Images/FNG10.png)
 
 
 > Which window size works best for the model?
