@@ -92,7 +92,7 @@ The models were tested on three windows of data:  1 day, 5 days, and 10 days.
 
 Sentiment was a poor predictor of Bitcoin prices across all three windows of data, therefore, short-term clusters of sentiment does not appear to be a helpful signal in determining Bitcoin's price.  
 
-Closing prices had a lower loss and tracked closer to actual bitcoin prices over time which may indicate autocorrelation and momentum factors should also potentially be explored. 
+Closing prices had a lower loss and tracked closer to actual bitcoin prices over time which may indicate autocorrelation and momentum factors should potentially be explored. 
 
 Both models predictability weakened as the lag increased.  
 
