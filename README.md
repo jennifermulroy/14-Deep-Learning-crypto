@@ -8,9 +8,10 @@ Long Short Term Memory model (LSTM) is a type of deep learning with a Recurrent 
 
 For this analysis, sentiment and previous closing prices were used as inputs in the models testing various lags of data to determine if there were potential predictive patterns that could accurately forecast prices. For the sentiment data, the [Crypto Fear and Greed Index (FNG)](https://alternative.me/crypto/fear-and-greed-index/) was used to build the first model. The second model used a lag of Bitcoin closing prices.  
 
-1. [Prepare the data for training and testing](Prepare-the-date-for-training-and-testing)
-2. [Build and train the custom LSTM model](Build-and-train-the-custom-LSTM-model)
-3. [Evaluate the performance of the model](Evaluate-the-performance-of-the-model)
+1. [Prepare the data for training and testing](#Prepare-the-date-for-training-and-testing)
+2. [Build and train the custom LSTM model](#Build-and-train-the-custom-LSTM-model)
+3. [Evaluate the performance of the model](#Evaluate-the-performance-of-the-model)
+
 
 ## Prepare the data for training and testing 
 
