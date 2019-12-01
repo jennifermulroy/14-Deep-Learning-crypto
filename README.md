@@ -2,7 +2,7 @@
 
 *Does sentiment or closing prices provide a better signal for cryptocurrency price movements?* 
 
-In this analysis, custom Long-short term memory (LSTM) models were used to predict Bitcoin's price. 
+In this analysis, custom Long-short term memory (LSTM) models were used to predict Bitcoin prices. 
 
 Long Short Term Memory model (LSTM) is a type of deep learning with a Recurrent Neural Network (RNN) architecture. It uses feedback connections to keep track of the dependencies between the elements in the input sequence and looks at the last “n” days (timestep or lag) data to predict how the series progresses. 
 
@@ -14,9 +14,9 @@ For this analysis, sentiment and previous closing prices were used as inputs in 
 
 ## Preparing the data for training and testing 
 
-Libraries `numpy` and `tensorflow` were imported. `Tensorflow` is a computational framework for building machine learning models. 
+Libraries `numpy` and `tensorflow` were first imported; `Tensorflow` is a computational framework for building machine learning models. 
 
-Once the data was imported, a function `window_data`, was used to create two new NumPy arrays for the features data (X) and target data (y). 
+Once the input data was imported, a function `window_data`, created two NumPy arrays for the features data (X) and target data (y). The function was an efficient way to set up various window periods. 
 
 ```
 def window_data(df, window, feature_col_number, target_col_number):
@@ -43,7 +43,7 @@ X_test = X_test.reshape((X_test.shape[0], X_test.shape[1],1))
 
  To build the models, `Sequential`, `LSTM`, `Dense`, and `Dropout` were imported from `tensorflow.keras.models` 
  
-`Dropout` is a regularization method where it randomly selects nodes and removes them from activation while training a network to reduce overfitting improve model performance. A dropout rate of 20% was selected for the models. 
+`Dropout` is a regularization method where it randomly selects nodes and removes them from activation while training a network to reduce overfitting and improve model performance. A dropout rate of 20% was selected for the models. 
 
 ```
 model = Sequential()
@@ -87,7 +87,13 @@ real_prices = scaler.inverse_transform(y_test.reshape(-1,1))
 
 ### Summary of Model Results 
 
-Three windows of data was tested, 1 day, 5 days, 10 days. Closing prices had a lower loss and tracked closer to actual bitcoin prices over time. Both models predictability weakened as the lag increased.  
+The models were tested on three windows of data:  1 day, 5 days, and 10 days. 
+
+Sentiment was a poor predictor of Bitcoin prices across all three windows of data, therefore, short-term clusters of sentiment does not appear to be a helpful signal in determining Bitcoin's price.  
+
+Closing prices had a lower loss and tracked closer to actual bitcoin prices over time which may indicate autocorrelation and momentum factors should also potentially be explored. 
+
+Both models predictability weakened as the lag increased.  
 
 | Window | Closing Loss | FNG Loss    |
 |:---:     | :---:     | :---:    |
