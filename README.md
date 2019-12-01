@@ -44,16 +44,16 @@ X_test = X_test.reshape((X_test.shape[0], X_test.shape[1],1))
 
  To build the models, `Sequential`, `LSTM`, `Dense`, and `Dropout` were imported from `tensorflow.keras.models` 
  
-`Dropout` is a regularization method where it randomly selects nodes and removes them from activation while training a network to reduce overfitting and improve model performance. A dropout rate of 20% was selected for the models. 
+`Dropout` is a regularization method where it randomly selects nodes and removes them from activation while training a network to reduce overfitting and improve model performance. A dropout rate of 20% was selected for the models.<br/> 
 
 ```
 model = Sequential()
 number_units = 30
 dropout_fraction = 0.2
 ```
-<br/>
-The models were built with three layers and compiled with the Adam optimizer and mean-squared-error loss function. The models were fit with X_train and y_train, 10 epochs, and 1 batch size.<br/>
 
+The models were built with three layers and compiled with the Adam optimizer and mean-squared-error loss function. The models were fit with X_train and y_train, 10 epochs, and 1 batch size.<br/>
+<br/>
 
 ```
 # Layer 1 
