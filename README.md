@@ -53,7 +53,7 @@ dropout_fraction = 0.2
 ```
 
 The models were built with three layers and compiled with the Adam optimizer and mean-squared-error loss function. The models were fit with X_train and y_train, 10 epochs, and 1 batch size.<br/>
-<br/>
+
 
 ```
 # Layer 1 
