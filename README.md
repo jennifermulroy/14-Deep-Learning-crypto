@@ -13,7 +13,7 @@ For this analysis, sentiment and previous closing prices were used as inputs in 
 3. [Evaluate the performance of the model](#Evaluate-the-performance-of-the-model)
 
 
-## Prepare the date for training and testing 
+## Prepare the data for training and testing 
 
 Libraries `numpy` and `tensorflow` were first imported; `Tensorflow` is a computational framework for building machine learning models. 
 
