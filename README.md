@@ -2,7 +2,10 @@
 
 *Does sentiment or closing prices provide a better signal for cryptocurrency price movements?* 
 
-In this analysis, custom Long-short term memory (LSTM) models were used to predict Bitcoin prices. 
+In this analysis, custom Long-short term memory (LSTM) models were used to predict 
+
+
+prices. 
 
 Long Short Term Memory model (LSTM) is a type of deep learning with a Recurrent Neural Network (RNN) architecture. It uses feedback connections to keep track of the dependencies between the elements in the input sequence and looks at the last “n” days (timestep or lag) data to predict how the series progresses. 
 
@@ -92,7 +95,7 @@ The models were tested on three windows of data:  1 day, 5 days, and 10 days.
 
 Sentiment was a poor predictor of Bitcoin prices across all three windows of data, therefore, short-term clusters of sentiment does not appear to be a helpful signal in determining Bitcoin's price.  
 
-Closing prices had a lower loss and tracked closer to actual bitcoin prices over time which may indicate autocorrelation and momentum factors should potentially be explored. 
+Closing prices had a lower loss and tracked closer to actual Bitcoin prices over time which may indicate autocorrelation and momentum factors should potentially be explored. 
 
 Both models predictability weakened as the lag increased.  
 
