@@ -4,7 +4,7 @@
 
 In this analysis, custom Long Short-Term Memory (LSTM) networks were used to predict Bitcoin prices. 
 
-Long Short-Term Memory (LSTM) networks are a type of deep learning with a Recurrent Neural Network (RNN) architecture, designed to recognize patterns in sequences of data. It uses feedback connections to keep track of the dependencies between the elements in the input sequence and looks at the last “n” days (timestep or lag) data to predict how the series progresses. 
+Long Short-Term Memory (LSTM) networks are a type of deep learning with a Recurrent Neural Network (RNN) architecture designed to recognize patterns in sequences of data. It uses feedback connections to keep track of the dependencies between the elements in the input sequence and looks at the last “n” days (timestep or lag) data to predict how the series progresses. 
 
 For this analysis, sentiment and previous closing prices were used as inputs in the models testing various lags of data to determine if there were potential predictive patterns that could accurately forecast prices. For the sentiment data, [Crypto Fear and Greed Index (FNG)](https://alternative.me/crypto/fear-and-greed-index/) was used to build the first model. The second model used a lag of Bitcoin closing prices.  
 
